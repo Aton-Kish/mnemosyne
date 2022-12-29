@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "app": "deno run --allow-env --allow-read=./ --allow-write=./archives --allow-net=api.modrinth.com src/app.ts"
+  },
+  "fmt": {
+    "options": {
+      "lineWidth": 120
+    }
+  }
+}
