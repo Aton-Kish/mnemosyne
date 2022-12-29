@@ -27,16 +27,17 @@ jobs:
           deno-version: ${{ env.DENO_VERSION }}
 
       - name: Execute
-        run: deno task app
+        run: |
+          deno task app
+          deno fmt
 
       - name: Commit and Push
         run: |
-          GIT_SHORT_HASH=$(git rev-parse --short HEAD)
           cd archives
           git config --local user.email "38515249+Aton-Kish@users.noreply.github.com"
           git config --local user.name "Aton-Kish"
           git add .
-          git commit -m "Update from ${{ github.repository }}@${GIT_SHORT_HASH}"
+          git commit -m "Update from ${{ github.repository }}@${{ github.sha }}"
           git push
 
       - name: Slack Notification
