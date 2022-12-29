@@ -1,0 +1,49 @@
+name: Archive
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "00 00 * * *"
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    env:
+      DENO_VERSION: "v1.x"
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v3
+
+      - name: Checkout main
+        uses: actions/checkout@v3
+        with:
+          ref: archives
+          path: archives
+
+      - name: Set up Deno ${{ env.DENO_VERSION }}
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
+
+      - name: Execute
+        run: deno task app
+
+      - name: Commit and Push
+        run: |
+          GIT_SHORT_HASH=$(git rev-parse --short HEAD)
+          cd archives
+          git config --local user.email "38515249+Aton-Kish@users.noreply.github.com"
+          git config --local user.name "Aton-Kish"
+          git add .
+          git commit -m "Update from ${{ github.repository }}@${GIT_SHORT_HASH}"
+          git push
+
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        if: failure()
+        env:
+          SLACK_USERNAME: ${{ github.repository }}
+          SLACK_COLOR: danger
+          SLACK_TITLE: Cron job fails
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
