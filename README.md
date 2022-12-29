@@ -1,3 +1,3 @@
 # mnemosyne
 
-Daily archive of Modrinth's API responses.
+Daily archives of Modrinth's API responses.
