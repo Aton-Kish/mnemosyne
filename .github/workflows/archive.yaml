@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DENO_VERSION: "v1.x"
+      MNEMOSYNE_ARCHIVES_DIR: archives
+      MNEMOSYNE_MODRINTH_API_HOST: api.modrinth.com
+      MNEMOSYNE_MODRINTH_API_ENDPOINT: https://api.modrinth.com/v2
+      MNEMOSYNE_MODRINTH_USER: ${{ github.repository_owner }}
+      MNEMOSYNE_USER_AGENT: ${{ github.repository }}@${{ github.sha }}
 
     steps:
       - name: Checkout main
@@ -19,7 +24,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: archives
-          path: archives
+          path: ${{ env.MNEMOSYNE_ARCHIVES_DIR }}
 
       - name: Set up Deno ${{ env.DENO_VERSION }}
         uses: denoland/setup-deno@v1
@@ -28,7 +33,12 @@ jobs:
 
       - name: Execute
         run: |
-          deno task app
+          deno run \
+            --allow-env \
+            --allow-read=./ \
+            --allow-write=./${{ env.MNEMOSYNE_ARCHIVES_DIR }} \
+            --allow-net=${{ env.MNEMOSYNE_MODRINTH_API_HOST }} \
+            src/app.ts
           deno fmt
 
       - name: Commit and Push
@@ -46,5 +56,5 @@ jobs:
         env:
           SLACK_USERNAME: ${{ github.repository }}
           SLACK_COLOR: danger
-          SLACK_TITLE: Cron job fails
+          SLACK_TITLE: Archive job fails
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

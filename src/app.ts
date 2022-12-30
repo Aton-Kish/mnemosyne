@@ -22,15 +22,15 @@
  */
 
 import { dotenvLoad, pathJoin } from "../deps.ts";
-import { mustGet } from "./env/mod.ts";
+import { mustGet as envMustGet } from "./env/mod.ts";
 import { ModrinthClient } from "./modrinth/mod.ts";
 
-const app = async () => {
-  await dotenvLoad({ export: true });
+await dotenvLoad({ export: true });
 
+const app = async () => {
   const client = new ModrinthClient();
 
-  const user = mustGet("MNEMOSYNE_MODRINTH_USER");
+  const user = envMustGet("MNEMOSYNE_MODRINTH_USER");
   const projects = await client.listUserProjects(user);
 
   const versionIds = projects.flatMap(({ versions }) => versions);
@@ -40,11 +40,11 @@ const app = async () => {
   const datetime = now.toISOString();
   const date = datetime.split("T")[0];
 
-  const dir = mustGet("MNEMOSYNE_ARCHIVES_DIR");
+  const dir = envMustGet("MNEMOSYNE_ARCHIVES_DIR");
   await Deno.mkdir(dir, { recursive: true });
   await Deno.writeTextFile(
     pathJoin(dir, `${date}.json`),
-    JSON.stringify({ datetime, projects, versions }, null, 2),
+    JSON.stringify({ datetime, projects, versions }),
   );
 };
 
