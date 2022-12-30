@@ -1,0 +1,158 @@
+{
+  "datetime": "2022-12-30T01:27:33.270Z",
+  "projects": [
+    {
+      "id": "MrLyhFlg",
+      "slug": "your-reputation",
+      "project_type": "mod",
+      "team": "UrTbCUce",
+      "title": "Your Reputation",
+      "description": "A WTHIT/Jade plugin that displays your reputation on a tooltip with each villager.",
+      "body": "[![Mod Loader: Fabric](https://img.shields.io/static/v1?label=modloader&message=fabric&color=brightgreen)](https://modrinth.com/mod/fabric-api)\n![Mod Environment](https://img.shields.io/static/v1?label=environment&message=client%2Fserver&color=yellow)\n[![MIT License](https://img.shields.io/static/v1?label=licence&message=MIT&color=blue)](https://raw.githubusercontent.com/Aton-Kish/your-reputation/1.18/LICENSE)\n\n[![Ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/atonkish)\n\n# Your Reputation\n\nYour Reputation is a [WTHIT](https://modrinth.com/mod/wthit)/[Jade](https://modrinth.com/mod/jade) plugin that displays your reputation on a tooltip with each villager.\n\n[<img src=\"https://i.imgur.com/Ol1Tcf8.png\" alt=\"Requires Fabric API\" width=\"128\" />](https://modrinth.com/mod/fabric-api)\n\nRequires [WTHIT](https://modrinth.com/mod/wthit)/[Jade](https://modrinth.com/mod/jade).\n\n| Reputation  | Value                          | Tooltip                                                                                                                             |\n| ----------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |\n| Friendly    | 100 or more                    | <img src=\"https://raw.githubusercontent.com/Aton-Kish/your-reputation/1.18/images/friendly.png\" alt=\"Friendly\" width=\"227\" />       |\n| Trustworthy | more than 0 and less than 100  | <img src=\"https://raw.githubusercontent.com/Aton-Kish/your-reputation/1.18/images/trustworthy.png\" alt=\"Trustworthy\" width=\"240\" /> |\n| Neutral     | equal to 0                     | <img src=\"https://raw.githubusercontent.com/Aton-Kish/your-reputation/1.18/images/neutral.png\" alt=\"Neutral\" width=\"228\" />         |\n| Suspicious  | more than -100 and less than 0 | <img src=\"https://raw.githubusercontent.com/Aton-Kish/your-reputation/1.18/images/suspicious.png\" alt=\"Suspicious\" width=\"232\" />   |\n| Hostile     | -100 or less                   | <img src=\"https://raw.githubusercontent.com/Aton-Kish/your-reputation/1.18/images/hostile.png\" alt=\"Hostile\" width=\"227\" />         |\n\nIf your reputation is \"Hostile\", villagers may be snitches.\n\n<img src=\"https://raw.githubusercontent.com/Aton-Kish/your-reputation/1.18/images/snitch.png\" alt=\"Snitch\" width=\"227\" />\n\nAnd then, iron golems will get angry and attack you...\n\n<img src=\"https://raw.githubusercontent.com/Aton-Kish/your-reputation/1.18/images/angry_golem.png\" alt=\"Angry Iron Golem\" width=\"241\" />\n",
+      "body_url": null,
+      "published": "2022-12-28T01:52:16.088888Z",
+      "updated": "2022-12-28T05:47:28.014983Z",
+      "approved": "2022-12-28T06:29:12.940110Z",
+      "status": "approved",
+      "requested_status": null,
+      "moderator_message": null,
+      "license": {
+        "id": "MIT",
+        "name": "MIT License",
+        "url": null
+      },
+      "client_side": "required",
+      "server_side": "required",
+      "downloads": 34,
+      "followers": 3,
+      "categories": [
+        "cursed",
+        "utility"
+      ],
+      "additional_categories": [],
+      "versions": [
+        "Vhyt3wWp",
+        "wxo9fNLU"
+      ],
+      "icon_url": "https://cdn.modrinth.com/data/MrLyhFlg/89f913657af93613aab2d1c8fe92ea4dee947746.png",
+      "issues_url": "https://github.com/Aton-Kish/your-reputation/issues",
+      "source_url": "https://github.com/Aton-Kish/your-reputation",
+      "wiki_url": null,
+      "discord_url": null,
+      "donation_urls": [
+        {
+          "id": "ko-fi",
+          "platform": "Ko-fi",
+          "url": "https://ko-fi.com/atonkish"
+        }
+      ],
+      "gallery": [],
+      "flame_anvil_project": null,
+      "flame_anvil_user": null
+    }
+  ],
+  "versions": [
+    {
+      "id": "Vhyt3wWp",
+      "project_id": "MrLyhFlg",
+      "author_id": "dgdWe9Zh",
+      "featured": false,
+      "name": "Your Reputation v0.2.0+wthit.1.19",
+      "version_number": "0.2.0+wthit.1.19",
+      "changelog": "[v0.2.0+wthit.1.19](https://github.com/Aton-Kish/your-reputation/releases/tag/v0.2.0%2Bwthit.1.19)",
+      "changelog_url": null,
+      "date_published": "2022-12-28T05:45:46.203059Z",
+      "downloads": 9,
+      "version_type": "release",
+      "status": "listed",
+      "requested_status": null,
+      "files": [
+        {
+          "hashes": {
+            "sha512": "0032f00448898b006a952957bd8fc673e707bbc4dd31b13806873054063e51a69e32a0970ebf02d6b1f0f500a31c88ce44cd5323b86f4212a86ddb78c2601d85",
+            "sha1": "5f07e06709dc5018cdafcd663b04234436daca66"
+          },
+          "url": "https://cdn.modrinth.com/data/MrLyhFlg/versions/Vhyt3wWp/your-reputation-0.2.0%2Bwthit.1.19.jar",
+          "filename": "your-reputation-0.2.0+wthit.1.19.jar",
+          "primary": true,
+          "size": 36815,
+          "file_type": null
+        }
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "6AQIaxuO",
+          "file_name": null,
+          "dependency_type": "required"
+        },
+        {
+          "version_id": null,
+          "project_id": "P7dR8mSH",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "game_versions": [
+        "1.19",
+        "1.19.1",
+        "1.19.2",
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ]
+    },
+    {
+      "id": "wxo9fNLU",
+      "project_id": "MrLyhFlg",
+      "author_id": "dgdWe9Zh",
+      "featured": false,
+      "name": "Your Reputation v0.2.0+jade.1.19",
+      "version_number": "0.2.0+jade.1.19",
+      "changelog": "[v0.2.0+jade.1.19](https://github.com/Aton-Kish/your-reputation/releases/tag/v0.2.0%2Bjade.1.19)",
+      "changelog_url": null,
+      "date_published": "2022-12-28T05:47:28.601821Z",
+      "downloads": 25,
+      "version_type": "release",
+      "status": "listed",
+      "requested_status": null,
+      "files": [
+        {
+          "hashes": {
+            "sha1": "9192c17b243e2d820bf56ced2420f83cfafb4563",
+            "sha512": "802e35a76694c44eed2e38e4011f1ea4c730c856ad342a5fba6dc9fe8188708998f46de501bcfcae87cddf8d73eb3f6b0bd9a79fb80b465f1599ffa3513e7360"
+          },
+          "url": "https://cdn.modrinth.com/data/MrLyhFlg/versions/wxo9fNLU/your-reputation-0.2.0%2Bjade.1.19.jar",
+          "filename": "your-reputation-0.2.0+jade.1.19.jar",
+          "primary": true,
+          "size": 37762,
+          "file_type": null
+        }
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "P7dR8mSH",
+          "file_name": null,
+          "dependency_type": "required"
+        },
+        {
+          "version_id": null,
+          "project_id": "nvQzSEkH",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "game_versions": [
+        "1.19",
+        "1.19.1",
+        "1.19.2",
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ]
+    }
+  ]
+}
