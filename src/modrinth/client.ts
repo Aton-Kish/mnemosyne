@@ -21,7 +21,7 @@
  * SOFTWARE.
  */
 
-import { mustGet } from "../env/mod.ts";
+import { mustGet as envMustGet } from "../env/mod.ts";
 import type { ModrinthProject, ModrinthVersion } from "./types.ts";
 
 export class ModrinthClient {
@@ -29,8 +29,8 @@ export class ModrinthClient {
   #userAgent: string;
 
   constructor() {
-    this.#endpoint = mustGet("MNEMOSYNE_MODRINTH_API_ENDPOINT");
-    this.#userAgent = mustGet("MNEMOSYNE_USER_AGENT");
+    this.#endpoint = envMustGet("MNEMOSYNE_MODRINTH_API_ENDPOINT");
+    this.#userAgent = envMustGet("MNEMOSYNE_USER_AGENT");
   }
 
   async listUserProjects(user: string) {
