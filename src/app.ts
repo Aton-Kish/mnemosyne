@@ -44,7 +44,7 @@ const app = async () => {
   await Deno.mkdir(dir, { recursive: true });
   await Deno.writeTextFile(
     pathJoin(dir, `${date}.json`),
-    JSON.stringify({ datetime, projects, versions }, null, 2),
+    JSON.stringify({ datetime, projects, versions }),
   );
 };
 
